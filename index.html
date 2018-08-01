@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try Canvas</title>
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+</head>
+<body>
+    <h1><b>Word Counter</b></h1>
+    <h3>Tempat untuk membantu kamu menghitung jumlah kata di essay mu^^</h3>
+    <section>
+		<p>
+			<label for="esay"><b>Post your esay here!!</b></label><br><br>
+			<textarea rows="20" cols="70" placeholder="Post Here!" id="esay"></textarea>
+		</p>
+		<a onclick="counting(esay)"><b>Start Counting</b></a>
+		<p><b>Numbers of Word:</b></p>
+		<p id="numberWords"><b></b></p>
+    </section>
+    
+    <canvas></canvas>
+
+    <style >
+        canvas{
+            border: 1px solid black;
+            position: fixed;
+            z-index: -1;
+            background-color: #FFFEFF;
+        }
+        body {
+            margin: 0;
+        }
+        h1{
+            font-family: 'Handlee', cursive;
+            text-align: center;
+            font-size: 60px;
+            position: absolute;
+            margin-left: 500px
+        }
+        body h3{
+            font-family: 'Handlee', cursive;
+            margin-left: 350px;
+            margin-top: 150px;
+            font-size: 25px;
+            position: absolute;
+            text-align: center;
+        }
+        section{
+            position: absolute;
+            font-family: 'Handlee', cursive;
+            border:1px;
+	        width: 600px;
+            margin-left: 400px;
+            padding: 15px 15px;
+            margin-top: 250px;
+            font-size: 25px;
+            text-align: center;
+            border-radius: 6px;
+            background-color: #99D9F5 ;
+        }
+        section a{
+            border-radius:7px;
+            font-family: 'Handlee', cursive;
+            background-color: #0396A6;
+            font-size: 22px;
+            margin: 10px;
+            padding: 14px;
+            color: #FAFAFA;
+        }
+        section a:hover{
+            background-color: #FAFAFA;
+            border: 1px#0396A6;
+            color:#0396A6;
+        }
+        #esay{
+            font-size: 13pt;
+            font-family: 'Handlee', cursive;
+            border-radius: 6px;
+            background-color: #FAFAFA;
+            border: 1px #99D9F5;
+        }
+        section p #numberWords{
+            font-size: 15px;
+        }
+    </style>
+    <script src="canvas.js"></script>
+</body>
+</html>
